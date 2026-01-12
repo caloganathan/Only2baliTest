@@ -326,12 +326,13 @@ class LoginView(APIView):
 
 # FAQ for zoho desk
 
+# ZOHO API Configuration - Credentials from environment variables
 ZOHO_API_URL = "https://desk.zoho.com/api/v1/tickets"
-ZOHO_CLIENT_ID = "1000.XC1IMB2L2FDB2C6EBUDGTATH5YE4CI"
-ZOHO_CLIENT_SECRET = "de9880e8d14f422eb3c76ce2f5962e306eda740936"
-ZOHO_REFRESH_TOKEN = "1000.25d664dd0e62e6d32f60d57652b9c77b.9e941fc15050eda8dc87fe9f05a56768"
-ZOHO_ACCESS_TOKEN = "1000.cbf31548e891b0dff6d2987ab174c6b1.78e0acf81a5293d985c4ab55c5ef95cd"
-ZOHO_DEPARTMENT_ID = "414369000012513029"  # Replace with the correct department ID
+ZOHO_CLIENT_ID = os.getenv("ZOHO_CLIENT_ID")
+ZOHO_CLIENT_SECRET = os.getenv("ZOHO_CLIENT_SECRET")
+ZOHO_REFRESH_TOKEN = os.getenv("ZOHO_REFRESH_TOKEN")
+ZOHO_ACCESS_TOKEN = os.getenv("ZOHO_ACCESS_TOKEN")
+ZOHO_DEPARTMENT_ID = os.getenv("ZOHO_DEPARTMENT_ID")
 
 class SendToZohoAPIView(APIView):
     def get_access_token(self):
