@@ -54,7 +54,7 @@ EMAIL_HOST = 'smtp.zoho.com'  # Change to your email service provider
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'admin@only2bali.com'  # Use your email here
-EMAIL_HOST_PASSWORD = 'EABAvGp0kaMF'  # Use your email password
+EMAIL_HOST_PASSWORD = 'os.getenv('EMAIL_HOST_PASSWORD')'  # Use your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # Default sender email
 
 
