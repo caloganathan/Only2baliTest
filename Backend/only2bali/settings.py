@@ -53,8 +53,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Use SMTP for re
 EMAIL_HOST = 'smtp.zoho.com'  # Change to your email service provider
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'admin@only2bali.com'  # Use your email here
-EMAIL_HOST_PASSWORD = 'os.getenv('EMAIL_HOST_PASSWORD')'  # Use your email password
+  # Use your email here
+  # Use your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # Default sender email
 
 
@@ -109,7 +109,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_CREDENTIALS = True
 # CORS_ORIGIN_WHITELIST = [
 #     'http://localhost:3000',
